@@ -548,3 +548,85 @@ nav {
     font-size: 18px;
     flex-shrink: 0;
 }
+ 
+.testimonials-section {
+    padding: 60px 100px;
+    background-color: #ffffff;
+}
+
+.testimonials-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.testimonials-container > h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: #2c2f24;
+    margin: 0 0 32px;
+}
+
+.testimonials-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testimonial-card {
+    background-color: #f9f9f7;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.testimonial-card h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ad343e;
+    margin: 0 0 16px;
+}
+
+.testimonial-card > p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #414536;
+    margin: 0 0 20px;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #DBDFD0;
+}
+
+.customer-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.customer-info h4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2c2f24;
+    margin: 0 0 4px;
+}
+
+.customer-info p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #737373;
+    margin: 0;
+}
