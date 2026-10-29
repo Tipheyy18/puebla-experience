@@ -212,3 +212,82 @@ nav {
     color: #fff;
     border: 1px solid #AD343E;
 }
+
+.menu-section {
+    padding: 60px 100px;
+}
+
+.menu-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-container h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 55px;
+    font-weight: 400;
+    text-align: center;
+    color: #2C2F24;
+    margin: 0 0 32px;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.menu-card {
+    width: 306px;
+    height: auto;
+    padding: 24px 24px 32px;
+    border: 1px solid #DBDFD0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#2C2F24;
+    border-radius: 50%;
+    background-color: #f3f3f0;
+    margin:0 auto 16px;
+}
+
+.menu-card h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color:#2C2F24;
+    margin: 16px 0 12px;
+}
+
+.menu-card p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#2C2F24;
+    margin: 0 0 16px;
+}
+
+.menu-card a {
+    display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color:#AD343E;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.menu-card a:hover {
+    color: #722f37;
+}
