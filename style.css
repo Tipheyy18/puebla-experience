@@ -31,9 +31,9 @@
 }
 
 .top-bar p {
-     font-family: "DM Sans", sans-serif;
-     font-size: 16px;
-     font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .social-links {
@@ -62,18 +62,22 @@
 .logo {
     display: flex;
     align-items: center;
-    gap:4px;
+    gap:8px;
     text-decoration: none;
 }
 
-.logo-img:first-child {
+.logo-img {
     width: 30px;
-    height: auto;
+    height: 38px;
+    object-fit: contain;
 }
 
-.logo-img:last-child {
-    width: 270px;
-    height: auto;
+.logo span {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    color: #474747;
 }
 
 nav {
@@ -249,6 +253,11 @@ nav {
     border: 1px solid #DBDFD0;
     border-radius: 8px;
     text-align: center;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .menu-icon {
@@ -443,6 +452,11 @@ nav {
     height: 320px;
     object-fit: cover;
     border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.service-card img:hover{
+    transform:scale(1.05);
 }
 
 .service-card h3 {
@@ -488,6 +502,11 @@ nav {
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.delivery-images img:hover{
+    transform:scale(1.05);
 }
 
 .chef-img {
@@ -682,15 +701,15 @@ nav {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
     gap: 16px;
     align-items: stretch;
 }
 
 .small-blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
 
@@ -698,6 +717,7 @@ nav {
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
+    min-width: 0;
 }
 
 .blog-card img {
@@ -705,10 +725,16 @@ nav {
     width: 100%;
     height: 160px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.featured-blog img {
+.featured-blog > img {
     height: 280px;
+}
+
+
+.blog-card img:hover {
+    transform: scale(1.05);
 }
 
 .blog-content {
@@ -737,5 +763,179 @@ nav {
     font-weight: 400;
     line-height: 1.5;
     color: #6b6b6b;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .blog-section {
+        padding: 48px 40px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-section {
+        padding: 40px 20px;
+    }
+
+    .blog-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .blog-header h2 {
+        font-size: 28px;
+    }
+
+    .small-blog-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .featured-blog > img {
+        height: 220px;
+    }
+}
+
+.site-footer {
+    background-color: #474747;
+    color: #FFFFFF;
+    padding: 60px 100px 24px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-about {
+    flex: 1.3;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.footer-logo h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+
+.footer-about > p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #DBDFD0;
+    margin: 0 0 24px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #AD343E;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-socials i:hover {
+    background-color: #DBDFD0;
+    color:#AD343E;
+}
+
+.footer-links {
+    flex: 0.7;
+}
+
+.footer-links h4,
+.footer-instagram h4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 14px;
+}
+
+.footer-links a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    color: #DBDFD0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+.footer-instagram {
+    flex: 1.2;
+}
+
+.instagram-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.instagram-images img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.instagram-images img:hover {
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    border-top: 1px solid #414536;
+    margin-top: 40px;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    color: #DBDFD0;
     margin: 0;
 }

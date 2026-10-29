@@ -43,12 +43,12 @@
 
 
         <nav>
-            <a href="#" class="logo">
-                <img src="/images/logo-icon.png" alt="logo">
-                <img src="/images/logo-text.png" alt="Puebla Experience">
+            <a href="#home" class="logo">
+                <img src="/images/logo-icon.png" alt="Puebla Experience">
+                <span>Puebla Experience</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#pages">Pages</a></li>
@@ -59,18 +59,18 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-section">
                 <h1>Best food for your taste in Puebla</h1>
                 <p>Discover delectable cuisine and unforgettable moments in our welcoming, culinary haven.</p>
                 <div class="hero-btns">
-                    <a href="#reserve" class="primary-btn">Reserve</a>
+                    <a href="#contact" class="primary-btn">Reserve</a>
                     <a href="#menu" class="secondary-btn">Explore Menu</a>
                 </div>
             </div>
         </section>
 
-        <section class="menu-section">
+        <section class="menu-section" id="menu">
             <div class="menu-container">
                 <h2>Browse Our Menu</h2>
                 <div class="menu-categories">
@@ -113,11 +113,11 @@
             </div>
         </section>
 
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="about-container">
                 <div class="about-image">
                     <img src="images/about-us img.png" alt="restaurant food">
-                    <div class="contact-overlay">
+                    <div class="contact-overlay" id="contact">
                         <h3>Come and visit us</h3>
                         <div class="contact-item">
                             <i class="bx bx-phone"></i>
@@ -148,7 +148,7 @@
             </div>
         </section>
 
-        <section class="services-section">
+        <section class="services-section" id="pages">
             <div class="services-container">
 
                 <h2>We also offer unique<br>services for your events</h2>
@@ -183,7 +183,7 @@
         </section>
 
 
-        <section class="delivery-section">
+        <section class="delivery-section" id="delivery">
             <div class="delivery-container">
                 <div class="delivery-images">
                     <img src="images/chef.png" alt="Chef preparing food" class="chef-img">
@@ -278,40 +278,32 @@
         </section>
 
 
-        <section class="blog-section">
+        <section class="blog-section" id="blog">
             <div class="blog-container">
                 <div class="blog-header">
                     <h2>Our Blog & Articles</h2>
                     <a href="#articles" class="read-all-btn">Read All Articles</a>
                 </div>
-                <div class="blog-grid">
+                <div class="blog-grid" id="articles">
                     <article class="blog-card featured-blog">
                         <img src="images/blog-burger.png" alt="Delicious burger">
                         <div class="blog-content">
                             <p class="blog-date">January 3, 2026</p>
                             <h3>The secret tips & tricks to prepare a perfect burger & pizza</h3>
                             <p>
-                                Learn our professional tips to create delicious meals
-                                and discover ways to improve your cooking experience.Learn our professional tips to
-                                create delicious meals
-                                and discover ways to improve your cooking experience.Learn our professional tips to
-                                create delicious meals
-                                and discover ways to improve your cooking experience.Learn our professional tips to
-                                create delicious meals
-                                and discover ways to improve your cooking experience.Learn our professional tips to
-                                create delicious meals
-                                and discover ways to improve your cooking experience. Learn our professional tips to
-                                create delicious meals
-                                and discover ways to improve your cooking experience.Learn our professional tips to
-                                create delicious meals
-                                and discover ways to improve your cooking experience.
+                                Get practical tips for building a better burger and making pizza at home, from
+                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
+                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
+                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
+                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
+                                choosing fresh ingredients to getting the perfect texture and flavor.
                             </p>
                         </div>
                     </article>
 
                     <div class="small-blog-grid">
                         <article class="blog-card">
-                            <img src="images/blog-fries.png" alt="Freshly prepared pasta">
+                            <img src="images/blog-fries.png" alt="Freshly prepared fries">
                             <div class="blog-content">
                                 <p class="blog-date">January 3, 2026</p>
                                 <h3>How to prepare the perfect fresh fries in an air fryer</h3>
@@ -341,7 +333,7 @@
 
                             <div class="blog-content">
                                 <p class="blog-date">January 3, 2026</p>
-                                <h3>5 great pasta restaurants you should visit</h3>
+                                <h3>5 great pizza recipes to make at home</h3>
                             </div>
                         </article>
                     </div>
@@ -353,7 +345,7 @@
         <div class="footer-container">
             <div class="footer-about">
                 <div class="footer-logo">
-                    <img src="images/logo-icon.png" alt="Puebla Experience logo">
+                    <img src="images/japanese-food.png" alt="Puebla Experience logo">
                     <h3>Puebla Experience</h3>
                 </div>
                 <p>
@@ -378,12 +370,15 @@
                     <li><a href="#pages">Pages</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#blog">Blog</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+
                 </ul>
             </div>
 
             <div class="footer-links">
                 <h4>Utility Pages</h4>
                 <ul>
+                    <li><a href="#">Start Here</a></li>
                     <li><a href="#">Style Guide</a></li>
                     <li><a href="#">Licenses</a></li>
                     <li><a href="#">Protected Password</a></li>
@@ -395,20 +390,17 @@
 
             <div class="footer-instagram">
                 <h4>Follow Us on Instagram</h4>
-
                 <div class="instagram-images">
-                    <img src="images/instagram-1.png" alt="A delicious meal">
-                    <img src="images/instagram-2.png" alt="French fries">
-                    <img src="images/instagram-3.png" alt="Freshly prepared food">
-                    <img src="images/instagram-4.png" alt="A plated meal">
+                    <img src="images/1.png" alt="A delicious meal">
+                    <img src="images/2.png" alt="French fries">
+                    <img src="images/3.png" alt="Freshly prepared food">
+                    <img src="images/4.png" alt="A plated meal">
                 </div>
             </div>
-
         </div>
 
-        <!-- Copyright -->
         <div class="footer-bottom">
-            <p>Copyright © Puebla Experience. All Rights Reserved.</p>
+            <p>Copyright © Puebla Experience 2026. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
