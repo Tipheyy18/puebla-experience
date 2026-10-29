@@ -42,12 +42,12 @@
         </div>
 
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="#home" class="logo">
                 <img src="/images/logo-icon.png" alt="Puebla Experience">
                 <span>Puebla Experience</span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -55,6 +55,10 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#menu" class="menu-btn">Menu</a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation menu"
+                aria-controls="primary-navigation" aria-expanded="false">
+                <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
         </nav>
     </header>
 
@@ -79,7 +83,7 @@
                             <i class="bx bx-cup-hot"></i>
                         </div>
                         <h3>Breakfast</h3>
-                        <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
+                        <p>Start your day with comforting breakfast favorites, freshly prepared and full of flavor.</p>
                         <a href="#menu">Explore Menu</a>
                     </div>
 
@@ -88,7 +92,7 @@
                             <i class="bx bx-bowl-balls"></i>
                         </div>
                         <h3>Main Dishes</h3>
-                        <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
+                        <p>Enjoy satisfying main dishes made with care and inspired by Puebla's rich food culture.</p>
                         <a href="#menu">Explore Menu</a>
                     </div>
 
@@ -97,7 +101,7 @@
                             <i class="bx bx-wine-alt"></i>
                         </div>
                         <h3>Drinks</h3>
-                        <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
+                        <p>Choose a refreshing drink to pair with your meal or enjoy on its own.</p>
                         <a href="#menu">Explore Menu</a>
                     </div>
 
@@ -106,7 +110,7 @@
                             <i class="bx bx-cake-slice"></i>
                         </div>
                         <h3>Desserts</h3>
-                        <p>In the new era of technology we look in the future with certainty and pride for our life.</p>
+                        <p>Finish your meal with a sweet treat made for sharing and savoring.</p>
                         <a href="#menu">Explore Menu</a>
                     </div>
                 </div>
@@ -136,13 +140,13 @@
 
                 <div class="about-content">
                     <h2>We provide healthy food for your family.</h2>
-                    <p class="about-text-dark">Our story Puebla history with a vision to create a unique dining
-                        experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in
-                        city's rich culinary culture, we aim to honor our local roots while infusing a global palate.
+                    <p class="about-text-dark">Inspired by Puebla's rich culinary culture, we bring people together
+                        over memorable food, warm hospitality, and a welcoming atmosphere. Our menu celebrates local
+                        flavors while drawing inspiration from around the world.
                     </p>
-                    <p class="about-text-light">At place, we believe that dining is not just about food, but also about
-                        the overall experience. Our staff, renowned for their warmth and dedication, strives to make
-                        every visit an unforgettable event.</p>
+                    <p class="about-text-light">We believe dining is about more than what's on the plate. From the
+                        first greeting to the last bite, we want every visit to feel relaxed, thoughtful, and worth
+                        sharing.</p>
                     <a href="#about" class="about-btn">More About Us</a>
                 </div>
             </div>
@@ -196,9 +200,8 @@
                 <div class="delivery-content">
                     <h2>Fastest Food Delivery in State</h2>
                     <p>
-                        Our visual designer lets you quickly and of drag a down your way to customapps for both keep
-                        desktop. Our online experience lets you quickly get a
-                        delicious meal delivered to your door.
+                        Enjoy your favorite meals without leaving home. Order online for a convenient experience and
+                        have freshly prepared food delivered straight to your door.
                     </p>
                     <ul class="delivery-benefits">
                         <li>
@@ -291,12 +294,8 @@
                             <p class="blog-date">January 3, 2026</p>
                             <h3>The secret tips & tricks to prepare a perfect burger & pizza</h3>
                             <p>
-                                Get practical tips for building a better burger and making pizza at home, from
-                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
-                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
-                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
-                                choosing fresh ingredients to getting the perfect texture and flavor. Get practical tips for building a better burger and making pizza at home, from
-                                choosing fresh ingredients to getting the perfect texture and flavor.
+                                Get practical tips for making better burgers and pizza at home, from choosing fresh
+                                ingredients to building flavor and getting the texture just right.
                             </p>
                         </div>
                     </article>
@@ -403,5 +402,25 @@
             <p>Copyright © Puebla Experience 2026. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        const nav = document.querySelector("header nav");
+        const navToggle = document.querySelector(".nav-toggle");
+
+        navToggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("is-open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+            navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+            navToggle.querySelector("i").className = isOpen ? "bx bx-x" : "bx bx-menu";
+        });
+
+        nav.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("is-open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.setAttribute("aria-label", "Open navigation menu");
+                navToggle.querySelector("i").className = "bx bx-menu";
+            });
+        });
+    </script>
 </body>
 </html>
