@@ -401,25 +401,5 @@
             <p>Copyright © Puebla Experience 2026. All Rights Reserved.</p>
         </div>
     </footer>
-    <script>
-        const nav = document.querySelector("header nav");
-        const navToggle = document.querySelector(".nav-toggle");
-
-        navToggle.addEventListener("click", () => {
-            const isOpen = nav.classList.toggle("is-open");
-            navToggle.setAttribute("aria-expanded", String(isOpen));
-            navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
-            navToggle.querySelector("i").className = isOpen ? "bx bx-x" : "bx bx-menu";
-        });
-
-        nav.querySelectorAll(".nav-links a").forEach((link) => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("is-open");
-                navToggle.setAttribute("aria-expanded", "false");
-                navToggle.setAttribute("aria-label", "Open navigation menu");
-                navToggle.querySelector("i").className = "bx bx-menu";
-            });
-        });
-    </script>
 </body>
 </html>
